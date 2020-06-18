@@ -3,13 +3,13 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     links: {
-      contact: "mailto:contact@me.com",
-      facebook: "https://www.facebook.com",
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://www.twitter.com",
+      contact: "mailto:arvind@thebility.engineer",
+      facebook: "https://www.facebook.com/vindnaidu",
+      linkedin: "https://www.linkedin.com/in/naiduarvind",
+      twitter: "https://www.twitter.com/rvine_naidu",
     },
     locale: "en",
-    title: "Travel destinations",
+    title: "The (*)bility Engineer's Library",
   },
   plugins: [
     {
