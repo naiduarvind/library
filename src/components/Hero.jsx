@@ -23,7 +23,7 @@ export const Hero = props => {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(49, 130, 206, 0) 24%, rgba(49, 130, 206, .5) 100%)",
+              "linear-gradient(to bottom, rgba(49, 130, 206, 0) 24%, rgba(0, 0, 0, .5) 100%)",
           }}
         ></div>
 
