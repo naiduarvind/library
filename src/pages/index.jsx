@@ -7,7 +7,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SiteMetadata
-        title="The (*)bility Engineer's Library"
+        title="The (*)bility Engineer"
         description="Check out my e-collection of articles, conference talks, papers, reports, Twitter threads and videos."
         image={data.hero.url}
       />
@@ -15,7 +15,7 @@ export default ({ data }) => {
       <Hero
         image={data.hero}
         tag="#library"
-        title="The (*)bility Engineer's Library"
+        title="The (*)bility Engineer"
         description="Check out my e-collection of articles, conference talks, papers, reports, Twitter threads and videos."
       />
 

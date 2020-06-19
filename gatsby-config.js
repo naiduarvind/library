@@ -9,7 +9,7 @@ module.exports = {
       twitter: "https://www.twitter.com/rvine_naidu",
     },
     locale: "en",
-    title: "The (*)bility Engineer's Library",
+    title: "Library",
   },
   plugins: [
     {
