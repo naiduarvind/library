@@ -14,8 +14,8 @@ export const Hero = props => {
           className="grayscale-1 blend-multiply"
           fadeIn={false}
           fixed={[
-            { ...image.childImageSharp.desktop, media: `(min-width: 768px)` },
-            { ...image.childImageSharp.mobile, media: `(max-width: 767px)` },
+            { ...image.childImageSharp.desktop, media: `(min-width: 180px)` },
+            { ...image.childImageSharp.mobile, media: `(max-width: 180px)` },
           ]}
         />
 

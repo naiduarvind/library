@@ -28,7 +28,7 @@ export const Card = props => {
             {name}
           </h1>
           <p className="text-base text-blue-900 mb-5 font-medium">{summary}</p>
-          <Feature label="Country" value={country} />
+          <Feature label="Author" value={country} />
         </div>
       </Link>
     </div>
@@ -57,7 +57,7 @@ export const query = graphql`
   fragment CardImageFragment on AirtableField {
     localFiles {
       childImageSharp {
-        fluid(maxWidth: 640, maxHeight: 420, cropFocus: NORTH) {
+        fluid(maxWidth: 180, maxHeight: 270, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
