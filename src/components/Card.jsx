@@ -7,7 +7,7 @@ import { Feature } from "."
 
 export const Card = props => {
   const {
-    country,
+    author,
     image: {
       localFiles: [cover],
     },
@@ -28,7 +28,7 @@ export const Card = props => {
             {name}
           </h1>
           <p className="text-base text-blue-900 mb-5 font-medium">{summary}</p>
-          <Feature label="Author" value={country} />
+          <Feature label="Author" value={author} />
         </div>
       </Link>
     </div>
@@ -36,7 +36,7 @@ export const Card = props => {
 }
 
 Card.propTypes = {
-  country: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   image: PropTypes.shape({
     localFiles: PropTypes.array,
   }).isRequired,

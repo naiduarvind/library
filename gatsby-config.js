@@ -62,8 +62,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Travel Destinations`,
-        short_name: `Travel Destinations`,
+        name: `Library`,
+        short_name: `Library`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#4299e1`,
