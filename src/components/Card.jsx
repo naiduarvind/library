@@ -14,20 +14,22 @@ export const Card = props => {
     name,
     navigation,
     slug,
-    summary,
+    status,
+    rating,
   } = props
 
   return (
     <div className="bg-white h-full shadow-sm rounded-md overflow-hidden hover:bg-blue-100">
       <Link to={`/${slug}`} state={{ navigation }} asModal>
         <div className="bg-blue-300">
-          <Img fluid={cover.childImageSharp.fluid} alt={name} />
+          <Img fixed={cover.childImageSharp.fixed} alt={name} />
         </div>
         <div className="p-5 pb-1">
-          <h1 className="text-2xl text-blue-500 font-bold leading-snug">
+          <h1 className="text-xl text-blue-500 font-bold leading-snug">
             {name}
           </h1>
-          <p className="text-base text-blue-900 mb-5 font-medium">{summary}</p>
+          <Feature label="Status" value={status}/>
+          <Feature label="Rating" value={rating}/>
           <Feature label="Author" value={author} />
         </div>
       </Link>
@@ -46,7 +48,8 @@ Card.propTypes = {
     items: PropTypes.arrayOf(PropTypes.string),
   }),
   slug: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
 }
 
 Card.defaultProps = {
@@ -57,8 +60,8 @@ export const query = graphql`
   fragment CardImageFragment on AirtableField {
     localFiles {
       childImageSharp {
-        fluid(maxWidth: 180, maxHeight: 270, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp
+        fixed(width: 180, height: 270) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

@@ -38,7 +38,8 @@ export const query = graphql`
           }
           name
           slug
-          summary
+          status
+          rating
         }
       }
     }

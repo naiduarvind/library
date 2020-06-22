@@ -14,7 +14,7 @@ export default props => {
       localFiles: [cover],
     },
     name,
-    summary,
+    status,
     tags,
     url,
   } = data.item.data
@@ -23,22 +23,22 @@ export default props => {
 
   return (
     <Layout navigation={navigation}>
-      <SiteMetadata title={name} description={summary} image={cover.url} />
+      <SiteMetadata title={name} description={status} image={cover.url} />
       <article className={modal && "max-h-80vh md:max-h-90vh overflow-auto"}>
         <div className={modal ? "p-4 lg:p-8" : "container py-8"}>
           <h1 className="text-2xl lg:text-3xl text-blue-500 font-bold leading-tight">
             {name}
           </h1>
           <p className="text-base lg:text-lg text-blue-800 font-medium mb-4">
-            {summary}
+            {status}
           </p>
           <div className="flex flex-wrap">
             <div className="w-full pb-4 lg:w-3/5 lg:pr-4 lg:pb-0">
-              <Img fluid={cover.childImageSharp.fluid} alt={name} />
+              <Img fixed={cover.childImageSharp.fixed} alt={name} />
             </div>
             <div className="w-full lg:w-2/5 lg:pl-4">
               <Feature label="Author" value={author} />
-              <Feature label="What to see?" value={tags} />
+              <Feature label="Tags" value={tags} />
               <Feature label="More info" value={url} />
               <p className="mt-4 whitespace-pre-line text-sm lg:text-base leading-normal text-blue-900">
                 {description}
@@ -62,16 +62,17 @@ export const query = graphql`
           localFiles {
             url: publicURL
             childImageSharp {
-              fluid(maxWidth: 180, maxHeight: 270, cropFocus: NORTH) {
-                ...GatsbyImageSharpFluid_withWebp
+              fixed(width: 180, height: 270) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
         }
         slug
-        summary
+        status
         tags
         url
+        rating
       }
     }
   }
