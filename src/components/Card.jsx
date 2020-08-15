@@ -24,7 +24,7 @@ export const Card = props => {
         <div style={{ backgroundColor: 'rgba(247, 250, 252, 1)' }}>
           <Img style={{ margin: 'auto', display: 'block' }} fixed={cover.childImageSharp.fixed} alt={name} />
         </div>
-        <div className="p-5 pb-1">
+        <div className="p-5 pb-1" style={{ paddingBottom: 'inherit' }}>
           <h1 className="text-blue-500 font-bold leading-snug">
             {name}
           </h1>
