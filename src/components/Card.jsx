@@ -25,7 +25,7 @@ export const Card = props => {
           <Img style={{ margin: 'auto', display: 'block' }} fixed={cover.childImageSharp.fixed} alt={name} />
         </div>
         <div className="p-5 pb-1">
-          <h1 className="text-xl text-blue-500 font-bold leading-snug">
+          <h1 className="text-blue-500 font-bold leading-snug">
             {name}
           </h1>
           <Feature label="Status" value={status}/>
