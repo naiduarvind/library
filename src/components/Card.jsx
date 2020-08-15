@@ -22,7 +22,7 @@ export const Card = props => {
     <div className="bg-white h-full shadow-sm rounded-md overflow-hidden hover:bg-blue-100">
       <Link to={`/${slug}`} state={{ navigation }} asModal>
         <div>
-          <Img fixed={cover.childImageSharp.fixed} alt={name} />
+          <Img style={{ margin: 'auto', display: 'block' }} fixed={cover.childImageSharp.fixed} alt={name} />
         </div>
         <div className="p-5 pb-1">
           <h1 className="text-xl text-blue-500 font-bold leading-snug">
