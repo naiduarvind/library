@@ -21,7 +21,7 @@ export const Card = props => {
   return (
     <div className="bg-white h-full shadow-sm rounded-md overflow-hidden hover:bg-blue-100">
       <Link to={`/${slug}`} state={{ navigation }} asModal>
-        <div className="bg-blue-300">
+        <div>
           <Img fixed={cover.childImageSharp.fixed} alt={name} />
         </div>
         <div className="p-5 pb-1">
