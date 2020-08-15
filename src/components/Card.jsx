@@ -19,7 +19,7 @@ export const Card = props => {
   } = props
 
   return (
-    <div className="bg-white h-full shadow-sm rounded-md overflow-hidden hover:bg-blue-100">
+    <div className="bg-white h-full rounded-md overflow-hidden hover:bg-blue-100">
       <Link to={`/${slug}`} state={{ navigation }} asModal>
         <div>
           <Img style={{ margin: 'auto', display: 'block' }} fixed={cover.childImageSharp.fixed} alt={name} />
