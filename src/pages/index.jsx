@@ -8,14 +8,14 @@ export default ({ data }) => {
     <Layout>
       <SiteMetadata
         title="The (*)bility Engineer's Library"
-        description="My collection of books, articles, papers, reports, Twitter threads and videos."
+        description="Collection of books, articles, papers, reports, Twitter threads and videos."
         image={data.hero.url}
       />
 
       <Hero
         image={data.hero}
         title="The (*)bility Engineer's Library"
-        description="My collection of books, articles, papers, reports, Twitter threads and videos."
+        description="Collection of books, articles, papers, reports, Twitter threads and videos."
       />
 
       <Cards nodes={data.items.nodes} />
