@@ -34,7 +34,7 @@ export default props => {
           </p>
           <div className="flex flex-wrap">
             <div className="w-full pb-4 lg:w-3/5 lg:pr-4 lg:pb-0">
-              <Img fixed={cover.childImageSharp.fixed} alt={name} />
+              <Img style={{ margin: 'auto', display: 'block' }} fixed={cover.childImageSharp.fixed} alt={name} />
             </div>
             <div className="w-full lg:w-2/5 lg:pl-4">
               <Feature label="Author" value={author} />
@@ -62,7 +62,7 @@ export const query = graphql`
           localFiles {
             url: publicURL
             childImageSharp {
-              fixed(width: 180, height: 270) {
+              fixed(width: 200, height: 270) {
                 ...GatsbyImageSharpFixed
               }
             }
