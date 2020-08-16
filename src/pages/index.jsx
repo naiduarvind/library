@@ -7,15 +7,15 @@ export default ({ data }) => {
   return (
     <Layout>
       <SiteMetadata
-        title="The (*)bility Engineer"
-        description="Check out my e-collection of articles, conference talks, papers, reports, Twitter threads and videos."
+        title="The (*)bility Engineer's Library"
+        description="My collection of books, articles, papers, reports, Twitter threads and videos."
         image={data.hero.url}
       />
 
       <Hero
         image={data.hero}
-        title="The (*)bility Engineer"
-        description="Check out my e-collection of articles, conference talks, papers, reports, Twitter threads and videos."
+        title="The (*)bility Engineer Library"
+        description="My collection of books, articles, papers, reports, Twitter threads and videos."
       />
 
       <Cards nodes={data.items.nodes} />
