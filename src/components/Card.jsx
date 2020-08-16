@@ -60,7 +60,7 @@ export const query = graphql`
   fragment CardImageFragment on AirtableField {
     localFiles {
       childImageSharp {
-        fixed(width: 180, height: 270) {
+        fixed(width: 200, height: 270) {
           ...GatsbyImageSharpFixed
         }
       }
