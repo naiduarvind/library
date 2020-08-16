@@ -40,9 +40,7 @@ export default props => {
               <Feature label="Author" value={author} />
               <Feature label="Tags" value={tags} />
               <Feature label="More info" value={url} />
-              <p className="mt-4 whitespace-pre-line text-sm lg:text-base leading-normal text-blue-900">
-                {description}
-              </p>
+              <Feature label="Description" value={description} />
             </div>
           </div>
         </div>
