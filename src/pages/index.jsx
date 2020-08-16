@@ -14,7 +14,7 @@ export default ({ data }) => {
 
       <Hero
         image={data.hero}
-        title="The (*)bility Engineer Library"
+        title="The (*)bility Engineer's Library"
         description="My collection of books, articles, papers, reports, Twitter threads and videos."
       />
 
