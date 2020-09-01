@@ -37,7 +37,6 @@ export const query = graphql`
           }
           name
           slug
-          status
           rating
         }
       }

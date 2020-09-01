@@ -14,7 +14,6 @@ export default props => {
       localFiles: [cover],
     },
     name,
-    status,
     tags,
     url,
   } = data.item.data
@@ -23,15 +22,12 @@ export default props => {
 
   return (
     <Layout navigation={navigation}>
-      <SiteMetadata title={name} description={status} image={cover.url} />
+      <SiteMetadata title={name} image={cover.url} />
       <article className={modal && "max-h-80vh md:max-h-90vh overflow-auto"}>
         <div className={modal ? "p-4 lg:p-8" : "container py-8"}>
           <h1 className="text-2xl lg:text-3xl text-blue-500 font-bold leading-tight">
             {name}
           </h1>
-          <p className="text-base lg:text-lg text-blue-800 font-medium mb-4">
-            {status}
-          </p>
           <div className="flex flex-wrap">
             <div className="w-full pb-4 lg:w-3/5 lg:pr-4 lg:pb-0">
               <Img style={{ margin: 'auto', display: 'block' }} fixed={cover.childImageSharp.fixed} alt={name} />
@@ -67,7 +63,6 @@ export const query = graphql`
           }
         }
         slug
-        status
         tags
         url
         rating

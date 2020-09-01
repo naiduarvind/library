@@ -14,7 +14,6 @@ export const Card = props => {
     name,
     navigation,
     slug,
-    status,
     rating,
   } = props
 
@@ -28,7 +27,6 @@ export const Card = props => {
           <h1 className="text-blue-500 font-bold leading-snug" style={{ paddingBottom: '20px' }}>
             {name}
           </h1>
-          <Feature label="Status" value={status}/>
           <Feature label="Rating" value={rating}/>
           <Feature label="Author" value={author} />
         </div>
@@ -48,7 +46,6 @@ Card.propTypes = {
     items: PropTypes.arrayOf(PropTypes.string),
   }),
   slug: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
   rating: PropTypes.string.isRequired,
 }
 
